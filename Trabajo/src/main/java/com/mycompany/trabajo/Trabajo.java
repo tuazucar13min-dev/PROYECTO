@@ -29,7 +29,7 @@ public class Trabajo {
         BaseDatos bd = new BaseDatos();
         bd.mostrarMenuProductos();
         System.out.println("Seleccione el producto ingresando su codigo");
-       
+
         try {
         codigo = dato.nextInt();
         System.out.println("ingrese cantidad:");
@@ -93,13 +93,13 @@ public class Trabajo {
         Scanner dato = new Scanner(System.in);
         int lista=0 , cantidad=0 ;
         double precio =0 ;
-
-        System.out.println("Lista de ropa  1:  S/.245.50");
-        bd.mostrarLista(bd.getListaRopa1());
+        
+        System.out.println("\nLista de ropa  1:  S/.245.50");
+        bd.mostrarListaRopa(bd.getListaRopa1());
         System.out.println("\nLista de ropa 2:  S/.350.20");
-        bd.mostrarLista(bd.getListaRopa2());
+        bd.mostrarListaRopa(bd.getListaRopa2());
         System.out.println("\nLista de ropa 3:  S/.180");
-        bd.mostrarLista(bd.getListaRopa3());
+        bd.mostrarListaRopa(bd.getListaRopa3());
      
         System.out.println("Seleccione el numero de lista");
         try { 
@@ -136,11 +136,11 @@ public class Trabajo {
         double precio =0 ;
      
          System.out.println("Lista manga  1:  S/.200.00");
-        bd.mostrarLista(bd.getListaRopa1()); // A
+        bd. mostrarListaMangas(bd.getListaMangas1()); // A
         System.out.println("\nLista mangan 2:  S/.350.20");
-        bd.mostrarLista(bd.getListaRopa2());
+        bd. mostrarListaMangas(bd.getListaMangas2());
         System.out.println("\nLista manga 3:  S/.180");
-        bd.mostrarLista(bd.getListaRopa3());
+        bd. mostrarListaMangas(bd.getListaMangas3());
      
         System.out.println("Seleccione el numero de lista");
         try { 
@@ -175,11 +175,11 @@ public class Trabajo {
         double precio =0 ;
 
         System.out.println("Lista de ropa anime  1:  S/.245.50");
-        bd.mostrarLista(bd.getListaRopa1());
+        bd.mostrarListaRopaAnime(bd.getListaRopaAnime1());
         System.out.println("\nLista de ropa anime 2:  S/.350.20");
-        bd.mostrarLista(bd.getListaRopa2());
+        bd.mostrarListaRopaAnime(bd.getListaRopaAnime2());
         System.out.println("\nLista de ropa anime 3:  S/.180");
-        bd.mostrarLista(bd.getListaRopa3());
+        bd.mostrarListaRopaAnime(bd.getListaRopaAnime3());
      
         System.out.println("Seleccione el numero de lista");
         try { 
@@ -252,7 +252,7 @@ public class Trabajo {
      
         switch (comando){
             case 1: 
-            System.out.println(" Ingresaste a sección de ropa  ");
+            System.out.println("\n====== INGRESASTE A LA SECCION DE ROPA ======");
             do {
                 Producto objcomprado = IngresaProductos();
                 if (objcomprado != null ){
@@ -271,7 +271,7 @@ public class Trabajo {
             break;
             
             case 2: 
-            System.out.println(" Ingresaste a sección de Lista de ropa  ");
+            System.out.println("\n====== INGRESASTE A LA SECCION DE LISTAS DE ROPA ====== ");
            
             do {                
                 ListaProducto objlista = IngresarListas();
@@ -294,7 +294,7 @@ public class Trabajo {
             // Esto imprime la factura de listas escolares
             break;
             case 3:
-            System.out.println("Ingresaste a la seccion de mangas ");
+            System.out.println("\n====== INGRESASTE A LA SECCION DE MANGAS ====== ");
             do {
                 MANGAS_ANIME objmanga = IngresaMangas();
                 if (objmanga != null ){
@@ -312,7 +312,7 @@ public class Trabajo {
             factura.imprimirFacturaMangas();
             break;
             case 4: 
-            System.out.println("Ingresaste a la seccion lista mangas  ");
+            System.out.println("\n====== INGRESASTE A LA SECCION DE LISTAS DE MANGAS ======  ");
             do {                
                 ListaMANGAS_ANIME objlista = IngresarListasMangas();
                 if ( objlista !=null){
@@ -335,7 +335,7 @@ public class Trabajo {
             
             
             case 5 :
-            System.out.println("Ingresaste a la seccion  ropa anime  ");
+            System.out.println("\n====== INGRESASTE A LA SECCION DE ROPA ANIME ======  ");
             do {
                 ROPA_ANIME objropaanime = IngresaRopaAnime();
                 if (objropaanime != null ){
@@ -354,7 +354,7 @@ public class Trabajo {
             break;
             
             case 6: 
-            System.out.println("Ingresaste a la seccion lista ropa anime   ");
+            System.out.println("\n======== INGRESASTE A LA SECCION DE LISTAS DE ROPA ANIME ======= ");
             do {                
                 ListaROPA_ANIME objlista = IngresarListasRopaAnime();
                 if ( objlista !=null){
@@ -375,7 +375,7 @@ public class Trabajo {
             factura.imprimirFacturaListasRopaAnime();
             break;
             }
-       System.out.println("\n¡Gracias por su compra!");
+       System.out.println("\n¡GRACIAS POR SU COMPRA 737 !");
        dato.close();
 
 }

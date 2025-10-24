@@ -256,7 +256,7 @@ public BaseDatos(){
         }
        
     public void mostrarMenuProductos() {
-        System.out.println("========= LISTA DE PRODUCTOS =========");
+        System.out.println("================ ROPA ================");
         System.out.printf("%-8s %-25s %-20s %-15s %-10s%n", "CODIGO", "NOMBRE", "MARCA"," GÉNERO ", "PRECIO");
 
         for (HashMap.Entry<Integer, String[]> entry : productosMap.entrySet()){ {
@@ -278,7 +278,7 @@ public BaseDatos(){
         }
     }
         public void mostrarRopaAnime(){
-        System.out.println("========= LISTA DE PRODUCTOS =========");
+        System.out.println("================  ROPA ANIME  ================");
         System.out.printf("%-8s %-25s %-20s %-15s %-10s%n", "CODIGO", "NOMBRE", "MARCA"," GÉNERO ", "PRECIO");
 
         for (HashMap.Entry<Integer, String[]> entry : productosMap.entrySet()){ {
@@ -297,7 +297,7 @@ public BaseDatos(){
 }
         }
      public void mostrarMangas(){
-        System.out.println("========= LISTA DE PRODUCTOS =========");
+        System.out.println("================ MANGAS  ================ ");
         System.out.printf("%-8s %-25s %-20s %-15s %-10s%n", "CODIGO", "NOMBRE", "MARCA"," GÉNERO ", "PRECIO");
 
         for (HashMap.Entry<Integer, String[]> entry : productosMap.entrySet()){ {
@@ -336,6 +336,25 @@ public BaseDatos(){
     public void agregarListaRopaAnime(ListaROPA_ANIME lista){
         listaRopaAnimeselec.add(lista);
    }
+   public void mostrarListaMangas ( String[] lista){
+   for (int i=0; i < lista.length; i++ ){
+   System.out.println((i +1 )+ "." + lista[i]);
+   }
+   }
+    public void mostrarListaRopaAnime( String[] lista){
+   for (int i=0; i < lista.length; i++ ){
+   System.out.println((i +1 )+ "." + lista[i]);
+   }
+   }
+    public void mostrarListaRopa( String[] lista){
+   for (int i=0; i < lista.length; i++ ){
+   System.out.println((i +1 )+ "." + lista[i]);
+   }
+   }
+    
+    
+    
+    
     // Getters 
     public HashMap<Integer, String[]> getProductosMap(){ return productosMap;}
     public HashMap<Integer,Double> getPreciosMap() { return preciosMap; }
@@ -360,6 +379,8 @@ public BaseDatos(){
     public String[]getListaRopaAnime1() { return listaRopaAnime1; }
     public String[]getListaRopaAnime2() { return listaRopaAnime2; }
     public String[]getListaRopaAnime3() { return listaRopaAnime3; }
+
+    
 }
 
 
